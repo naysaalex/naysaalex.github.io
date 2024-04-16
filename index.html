@@ -1,0 +1,142 @@
+<!-- Naysa Alex Personal Website Code-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Naysa's Personal Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body oncontextmenu="return false">
+
+<section class="hero"> 
+	<div class ="main-width">
+		<header>
+			<div class = "logo">
+				<i class="fa-solid fa-n" style= "pointer-events: none;"></i>
+			</div>
+
+			<nav>
+				<div class="hamb">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<ul class="nav-list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="resume.html">Resume</a></li>
+					<li class="btn"><a href="#" id="button" class="button">Contact Me</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="container">
+			<div class="hero-text">
+				<h3> Hi, There!</h3>
+				<h1> I am <span class="input"></span></h1>
+				<!-- <p>A bunch of random latin words</p> -->
+				<div class ="social">
+					<a href="https://github.com/naysaalex" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+					<a href="https://www.linkedin.com/in/naysa-alex/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/naysaalex/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://www.instagram.com/papadumsfriends/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-car"></i></a>
+					<!--<a href="#"></a>
+					<a href="#"></a> -->
+				</div>
+				<button type="button" onclick="window.location.href='about.html'">More About Me</button>
+			</div>
+
+			<div class="bottom">
+				<p>@ 2023 Naysa - All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Modal Section-->
+<div class="bg-modal">
+	<div class="modal-content">
+		<div class="close">+</div>
+		<h3 >Please contact me if you have any questions or if you have any feedback regarding my website/resume!</h3>
+		<div class ="social-modal" >
+					<a href="https://www.linkedin.com/in/naysa-alex/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/naysaalex/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+					<a href="mailto: naysaalex@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+					<!--<a href="#"></a>
+					<a href="#"></a> -->
+		</div>
+		<!-- <form style="margin-left: auto; margin-right: auto;" onsubmit="sendEmail(); reset(); return false;">
+			<input type="text" id="name" placeholder="Name" required>
+			<input type="email" id="email" placeholder="Email id" required>
+			<input type="text" id="phone" placeholder="Phone no.">
+			<textarea id="message" rows="4" placeholder="Type your message here"></textarea>
+			<button type="submit">Submit</button>
+		</form> -->
+	</div>
+</div>
+
+<!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	var btn = document.getElementById('btn')
+	btn.addEventListener('click', function(e)){
+		e.preventDefault()
+		var name = document.getElementById('name').value;
+		var email = document.getElementById('email').value;
+		var phone = document.getElementById('phone').value;
+		var message = document.getElementById('message').value;
+
+		Email.send({
+    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+    To : 'them@website.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+	}
+</script> -->
+
+<script type="text/javascript" src="script.js"></script>
+
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+	var typed = new Typed(".input", {
+		strings:["Naysa Alex.", "a Student.", "a Coder.","a Team Player.","a Car Enthusiast.","a Researcher.","a Foodie.","a Web Developer.","an iOS App Developer.","a Leader.","a Hard Worker.", "a Gym Rat."],
+		typeSpeed:70,
+		backSpeed: 60,
+		loop: true
+	});
+</script>
+<script>
+	document.getElementById('button').addEventListener('click', function(){
+    document.querySelector('.bg-modal').style.display = 'flex';
+});
+
+   document.querySelector('.close').addEventListener('click', function(){
+   document.querySelector('.bg-modal').style.display = 'none';
+});
+
+   var hamburger = document.querySelector(".hamb");
+var navlist = document.querySelector(".nav-list");
+var links = document.querySelector(".nav-list li");
+
+hamburger.addEventListener("click", function(){
+	this.classList.toggle("click");
+	navlist.classList.toggle("open");
+});
+</script>
+
+</body>
+</html>
